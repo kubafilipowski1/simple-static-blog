@@ -1,0 +1,101 @@
+@import 'vendors/_normalize';
+
+* {
+	box-sizing:border-box;
+
+	&:before,&:after {
+		box-sizing: inherit;
+	}
+}
+
+html {
+	background: getColor(background, html);
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background: getColor(background, body);
+	height: 100%;
+}
+
+.wrap {
+	position: relative;
+	width: 100%;
+
+	&--guttered {
+		padding-right: $gutter;
+		padding-left: $gutter;
+
+		&--s {
+			padding-right: $gutter-s;
+			padding-left: $gutter-s;
+		}
+
+		&--l {
+			padding-right: $gutter-l;
+			padding-left: $gutter-l;
+		}
+
+	}
+
+}
+
+
+// Styles for viewport > 480 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-s) {
+}
+
+
+// Styles for viewport > 600 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-m) {
+}
+
+
+// Styles for viewport > 768 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-l) {
+}
+
+
+// Styles for viewport > 992 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-xl) {
+}
+
+
+// Styles for viewport > 1280 px --------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-xxl) {
+}
+
+
+// Styles for Retina / High DPI Styles --------------------------------------- //
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
+}
+
+// Print Styles -------------------------------------------------------------- //
+
+@media print {
+
+	* {
+		background: transparent!important;
+		color: #000!important;
+		text-shadow: none!important;
+		box-shadow: none!important;
+		opacity: 1!important;
+		filter: none!important;
+		-ms-filter: none!important;
+	}
+
+	@page {
+		margin: 2cm;
+	}
+
+}
